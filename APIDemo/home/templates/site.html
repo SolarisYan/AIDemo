@@ -1,1 +1,138 @@
-this is website index
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <title>Home</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="{% static 'bootstrap/3.3.7/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/3.3.7/font-awesome/css/font-awesome.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/3.3.7/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/3.3.7/animate-css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/3.3.7/flexslider/flexslider.css' %}">
+  <link id="theme-style" rel="stylesheet" href="{% static 'bootstrap/3.3.7/css/styles.css' %}">
+</head>
+
+<body class="home-page">
+  <div class="adcenter">
+    <script src="http://www.cssmoban.com/include/new/ggad2_728x90.js"></script>
+  </div>
+
+  <div class="wrapper">
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+      <div class="container">
+        <h1 class="logo pull-left">
+          <a href="index.html">
+            <span class="logo-title">AVAILINK</span>
+          </a>
+        </h1>
+        <!--//logo-->
+        <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!--//nav-toggle-->
+          </div>
+          <!--//navbar-header-->
+          <div class="navbar-collapse collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active nav-item">
+                <a href="demo.html">主页</a>
+              </li>
+              <li class="nav-item">
+                <a href="tour.html">解决方案</a>
+              </li>
+              <li class="nav-item">
+                <a href="pricing.html">联系我们</a>
+              </li>
+              <li class="nav-item">
+                <a href="/signin/signin.html">Log in</a>
+              </li>
+              <!--
+                            <li class="nav-item"><button type="button" class="login-trigger btn btn-link" data-toggle="modal" data-target="/signin">Log in</button></li>
+                          -->
+              <!--
+                            <li class="nav-item nav-item-cta last"><button type="button" class="btn btn-cta btn-cta-primary" data-toggle="modal" data-target="#signup-modal" >Get Started</button></li>
+                            >
+                          -->
+            </ul>
+            <!--//nav-->
+          </div>
+          <!--//navabr-collapse-->
+        </nav>
+        <!--//main-nav-->
+      </div>
+      <!--//container-->
+    </header>
+    <!--//header-->
+
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section">
+      <div class="container intro">
+        <h2 class="title">
+          <br />
+          <br />
+          <br />中天医疗
+          <br />探索AI世界的一扇窗口！</h2>
+        <!--
+                <p class="summary">Tempo is a Bootstrap-based HTML5 template designed specifically to help startups promote their products or services.</p>
+              -->
+        <a class="btn btn-cta btn-cta-secondary" href="tour.html">点击开始</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+      <!--//intro-->
+    </section>
+
+    <!-- ******FOOTER****** -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-5 col-sm-7 col-sm-12 about">
+              <div class="footer-col-inner">
+                <h3 class="title">Copyright © 2018 Availink</h3>
+                <p>联系我们:
+                  <a href="mailto:junting.yan@availink.com?Subject=AI医疗%20咨询" target="_top" title="中天医疗">junting.yan@availink.com</a>
+                </p>
+
+              </div>
+              <!--//footer-col-inner-->
+            </div>
+            <!--//foooter-col-->
+          </div>
+          <!--//row-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//footer-content-->
+    </footer>
+    <!--//footer-->
+
+
+
+</body>
+
+</html>
