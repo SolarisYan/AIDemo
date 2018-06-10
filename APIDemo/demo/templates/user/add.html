@@ -1,0 +1,9 @@
+{% extends "common/form.html" %}
+
+{% block modal-title %}用户注册{% endblock %}
+
+{% block form-action %}{% url 'demo:user:register' %}{% endblock %}
+
+{% block form-enctype %}enctype="multipart/form-data"{% endblock %}
+
+{% block form-submit %}注册{% endblock %}

@@ -17,12 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 
-# from django.views.generic.base import TemplateView
-# from django.views.generic import TemplateView
+from demo.views import login
 
+from demo.forms.user import UserRegister
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'', include('home.urls')),
-    url(r'^demo/', include('demo.urls', )),  # namespace='demo'
+    url(r'^demo/', include('demo.urls',)),
+    url(r'^accounts/login/$', login.login, name='login'),
+    url(r'^accounts/logout/$', login.logout, name='logout'),
+    # url(r'^accounts/register/$', login.register, name='register'),
+    url(r'^register/$', UserRegister.as_view(), name='register'),
 ]

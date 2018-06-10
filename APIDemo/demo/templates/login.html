@@ -1,0 +1,42 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% block login %}
+<!-- 登录窗口 -->
+<div id="login" class="container" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close container">×</span>
+      </div>
+      <div class="modal-title">
+        <h1 class="text-center">登录</h1>
+      </div>
+      <div class="modal-body">
+        <form class="form-group" action="{%url 'login' %}" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for="" class="sr-only">用户名</label>
+            <input class="form-control" name="username" type="text" placeholder="用户名">
+            <!--
+                                <label for="inputEmail" class="sr-only">邮箱地址</label>
+				<input type="email" id="inputEmail" class="form-control" placeholder="邮箱地址" required autofocus>
+-->
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="sr-only">密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
+          </div>
+          <div class="text-right">
+            <button class="btn btn-primary" type="submit">登录</button>
+            <button class="btn btn-danger" type="button" data-dismiss="modal" onclick="document.getElementById('login').style.display='none'">取消</button>
+          </div>
+          <!-- <a href="{%url 'register' %}" data-toggle="modal" data-dismiss="modal" data-target="#register" onclick="document.getElementById('register').style.display='block'">还没有账号？点我注册</a> -->
+          <a href="{%url 'register' %}" data-toggle="modal" data-dismiss="modal">还没有账号？点我注册</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

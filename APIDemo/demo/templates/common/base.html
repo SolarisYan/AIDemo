@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Avalink AI Images system">
+  <meta name="author" content="yanjt">
+  <title>注册/登录/中天联科</title>
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'bootstrap/3.3.7/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- <ul class="nav navbar-nav navbar-right">
+    <li>
+      <a data-toggle="modal" data-target="#register" href="#register" onclick="document.getElementById('register').style.display='block'"
+        style="width:auto;">
+        <span class="glyphicon glyphicon-user"></span> 注册</a>
+    </li>
+    <li>
+      <a data-toggle="modal" data-target="#login" href="#login" onclick="document.getElementById('login').style.display='block'"
+        style="width:auto;">
+        <span class="glyphicon glyphicon-log-in"></span>登录</a>
+    </li>
+  </ul> -->
+
+ {% block register %} {% endblock %}
+
+ {% block login %} {% endblock %}
+
+  <!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
+  <script src="{% static 'bootstrap/3.3.7/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

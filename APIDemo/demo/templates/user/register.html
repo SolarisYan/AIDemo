@@ -1,0 +1,49 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% block register %}
+
+<!-- 注册窗口 -->
+<div id="register" class="container" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close container">×</span>
+      </div>
+      <div class="modal-title">
+        <h1 class="text-center">注册</h1>
+      </div>
+      <div class="modal-body">
+        <form class="form-group" action="{%url 'register' %}" method="post" accept-charset="utf-8">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="" class="sr-only">用户名</label>
+            <input class="form-control" type="text" name="username" placeholder="用户名(必填):">
+          </div>
+          <div class="form-group">
+            <label for="" class="sr-only">密码</label>
+            <input class="form-control" type="password" name="password" placeholder="输入密码(必填):">
+          </div>
+          <div class="form-group">
+            <label for="" class="sr-only">再次输入密码</label>
+            <input class="form-control" type="password" placeholder="确认密码(必填):">
+          </div>
+          <div class="form-group">
+            <label for="" class="sr-only">邮箱</label>
+            <input class="form-control" type="email" name="email" placeholder="邮箱(必填):">
+          </div>
+          <div class="form-group">
+            <label for="" class="sr-only">电话</label>
+            <input class="form-control" type="text" name="telephone" placeholder="电话(选填):">
+          </div>
+          <div class="text-right">
+            <button class="btn btn-primary" type="submit">提交</button>
+            <!-- <button class="btn btn-danger" type="button" data-dismiss="modal" onclick="document.getElementById('register').style.display='none'">取消</button> -->
+          </div>
+          <a href="{%url 'login' %}" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

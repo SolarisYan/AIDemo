@@ -1,0 +1,33 @@
+{% load static %}
+<link href="{% static 'bootstrap/3.3.7/css/bootstrap.min.css' %}" rel="stylesheet">
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" style="text-align: center">{% block modal-title %}{% endblock %}</h4>
+</div>
+
+<div class="modal-body">
+    <form role="form" class="form-horizontal" action="{% block form-action %}{% endblock %}" method="post" {% block form-enctype %}{% endblock %}>
+        {% csrf_token %}
+        {% if form %}
+            {% for item in form %}
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{item.label}}</label>
+                <div class="col-sm-10">
+                        {{item}}
+                </div>
+                <div class="col-md-offset-1 col-md-10">
+                    {{item.errors}}
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            {% block form %}{% endblock %}
+        {% endif %}
+        <div style="text-align:right">
+            <button type="submit" class="btn btn-primary">{% block form-submit %}{% endblock %}</button>
+        </div>
+    </form>
+</div>
+
+{% block inline-js %}{% endblock %}
